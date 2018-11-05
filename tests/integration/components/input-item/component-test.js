@@ -8,15 +8,21 @@ module('Integration | Component | input-item', function(hooks) {
 
   test('it renders an input element', async function(assert) {
     await render(hbs`
-      {{#input-item}}
-        template block text
-      {{/input-item}}
+      {{input-item}}
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.$('[data-test-add-input]').value);
   });
 
   test('it renders a button element', async function(assert) {
+    await render(hbs`
+      {{input-item}}
+    `);
+
+    assert.equal(this.$('[data-test-add-button]').value);
+  });
+
+  test('it adds a new task', async function(assert) {
 
   });
 });

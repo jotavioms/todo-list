@@ -6,6 +6,7 @@ export default Component.extend({
 
   layout: hbs`
     <h1 data-test-header>{{header}}</h1>
-    
+    {{input-item}}
+    {{task-list-item tasks=tasks}}
   `,
 });
