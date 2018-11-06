@@ -4,14 +4,8 @@ import hbs from 'htmlbars-inline-precompile';
 export default Component.extend({
   layout: hbs`
     <div>
-      {{input-element
-        dataTest="add-input"
-        placeholder="Novo item"}}
-
-      {{button-element
-        dataTest="add-button"
-        text="+"
-      }}
+      <input data-test="add-input" placeholder="Novo item"/>
+      <button data-test="add-button">+</button>
     </div>
   `,
 });
