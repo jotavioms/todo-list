@@ -6,21 +6,24 @@ import hbs from 'htmlbars-inline-precompile';
 module('Integration | Component | task-list-item', function(hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+  test('it renders a list of tasks', async function(assert) {
+    this.set('tasks', [
+      {
+        'name': 'Test Item 1',
+        'done': false
+      },
+      {
+        'name': 'Test Item 2',
+        'done': false
+      }
+    ])
 
-    await render(hbs`{{task-list-item}}`);
-
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
     await render(hbs`
-      {{#task-list-item}}
-        template block text
-      {{/task-list-item}}
-    `);
+        {{task-list-item
+          tasks=tasks}}
+      `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    console.log();
+    assert.equal(this.$('[data-test="task-list"] li').length, 2);
   });
 });

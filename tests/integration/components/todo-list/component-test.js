@@ -6,7 +6,14 @@ import hbs from 'htmlbars-inline-precompile';
 module('Integration | Component | todo-list', function(hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders renders a list of tasks', async function(assert) {
-    
+  test('it renders header text', async function(assert) {
+    const text = 'Texto Qualquer';
+    this.set('text', text);
+
+    await render(hbs`
+      {{todo-list header=text}}
+    `);
+
+    assert.equal(this.$('[data-test="header"]').text(), text);
   });
 });
