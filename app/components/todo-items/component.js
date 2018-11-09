@@ -6,7 +6,7 @@ export default Component.extend({
     <div>
       <ul data-test="task-list">
         {{#each tasks as |task|}}
-          {{todo-item task=task}}
+          {{todo-items/todo-item task=task}}
         {{/each}}
       </ul>
     </div>

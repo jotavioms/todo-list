@@ -3,7 +3,7 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-module('Integration | Component | todo-list-item', function(hooks) {
+module('Integration | Component | todo-items', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders a list of tasks', async function(assert) {
