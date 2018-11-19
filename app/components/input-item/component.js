@@ -3,15 +3,16 @@ import hbs from 'htmlbars-inline-precompile';
 
 export default Component.extend({
   layout: hbs`
-    <div>
+    <div class="input-item">
       {{app-input
         placeholder="Novo Item"
-        class="add-input"
+        class="add-input input"
         data-test="add-input"
         value=inputValue
+        action=addTask
       }}
       {{app-button
-        text="+"
+        class="add-button input"
         click=addTask
         data-test="add-button"
       }}

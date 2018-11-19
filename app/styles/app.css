@@ -1,0 +1,62 @@
+.container {
+  margin: auto;
+  width: 60%;
+  padding: 2%;
+  text-align: center;
+}
+
+.input-item {
+  margin: 20% 0 14% 0;
+}
+
+.input {
+  outline: none;
+  border: none;
+}
+
+.add-input {
+  border-bottom: 1px dotted gray;
+  width: 70%;
+  font-size: 18px;
+}
+
+.add-button {
+  background: url('/assets/images/addbtn.png') no-repeat;
+  width: 32px;
+  height: 32px;
+  float: right;
+}
+
+.add-button:hover {
+  cursor: pointer;
+}
+
+.list {
+  list-style: none;
+  text-align: left;
+  padding-left: 1%;
+  height: 250px;
+  overflow: auto;
+}
+
+.list-item {
+  margin-bottom: 1%;
+}
+
+.todo-item-container {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.todo-item-container input {
+  cursor: pointer;
+}
+
+.remove-task-button {
+  float: right;
+  background: url('/assets/images/rmvbtn.png') no-repeat;
+  width: 16px;
+  height: 16px;
+  border: none;
+  cursor: pointer;
+}

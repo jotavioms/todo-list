@@ -15,5 +15,11 @@ export default Component.extend({
 
   input(event) {
     this.set('value', event.target.value)
+  },
+
+  keyPress(event) {
+    if (event.keyCode === 13) {
+      this.sendAction();
+    }
   }
 });

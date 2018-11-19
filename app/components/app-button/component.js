@@ -7,8 +7,4 @@ export default Component.extend({
   attributeBindings: [
     'data-test'
   ],
-
-  layout: hbs`
-    {{text}}
-  `
 });
